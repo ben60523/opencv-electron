@@ -4,11 +4,15 @@ opencv-electron
 
 ![opencv-electron](https://user-images.githubusercontent.com/31125521/31113188-51e7c6d8-a818-11e7-9015-295d1864e1d6.jpg)
 
-Note that there is an additional npm script to rebuild the package for electron, which is called from the install script:
+# Build opencv4nodejs
 ```
-"electron-rebuild": "electron-rebuild -w opencv4nodejs"
+npm install https://github.com/ben60523/npm-opencv-build.git
+npm install https://github.com/ben60523/opencv4nodejs.git
+# Build .node file
+node node_modules\opencv4nodejs\install\install.js
+# Rebuild with electron-rebuild
+node node_modules\opencv4nodejs\install\install.js e
 ```
-
 # plain-js
 This example shows how to use opencv4nodejs with electron and plain HTML + Javascript without any bundler.
 
