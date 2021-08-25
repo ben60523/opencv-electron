@@ -25,8 +25,9 @@
     "start": "electron main.js"
   },
   "dependencies": {
-    "electron": "^1.8.4",
-    "electron-rebuild": "^1.7.3",
-    "opencv4nodejs": "^4.2.1"
+    "nan": "^2.15.0",
+    "electron": "^13.2.2",
+    "opencv-build": "https://github.com/ben60523/npm-opencv-build.git",
+    "opencv4nodejs": "https://github.com/ben60523/opencv4nodejs.git"
   }
 }

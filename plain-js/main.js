@@ -3,14 +3,18 @@ const url = require('url');
 const path = require('path');
 
 const { app, BrowserWindow } = electron;
-
+app.allowRendererProcessReuse = false
 let win;
 const createWindow = () => {
   win = new BrowserWindow({
     width: 1400,
     height: 800,
     toolbar: false,
-    resizable: true
+    resizable: true,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false,
+    }
   });
 
   win.setResizable(true);
