@@ -1,9 +1,9 @@
-import * as React from 'react'
+const React = require('react');
 
 const cv = require('opencv4nodejs');
 const path = require('path');
 
-export default class Root extends React.Component{
+class Root extends React.Component{
   renderImage(img) {
     const { canvas } = this
     const matRGBA = img.channels === 1
@@ -35,3 +35,5 @@ export default class Root extends React.Component{
     )
   }
 }
+
+module.exports = Root

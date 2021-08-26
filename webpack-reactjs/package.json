@@ -20,9 +20,36 @@
   },
   "homepage": "https://github.com/justadudewhohacks/opencv-electron#readme",
   "scripts": {
-    "start": "electron ./main/main.js"
+    "start": "electron ./main/main.js",
+    "build": "cross-env NODE_ENV=development npx webpack --config ./webpack.config.js --watch"
   },
   "dependencies": {
-    "electron": "^1.8.4"
+    "electron": "^13.2.2",
+    "nan": "^2.15.0",
+    "opencv-build": "github:ben60523/npm-opencv-build",
+    "opencv4nodejs": "github:ben60523/opencv4nodejs",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-react-app": "^10.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.2.0",
+    "electron-rebuild": "^3.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.2.0",
+    "node-loader": "^2.0.0",
+    "react-hot-loader": "^4.13.0",
+    "ts-loader": "^9.2.5",
+    "webpack": "^5.51.1",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0"
   }
 }
