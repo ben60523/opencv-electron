@@ -8,7 +8,7 @@ module.exports = (env = {}, argv = {}) => ({
   node: {
     __dirname: false,
   },
-  target: 'node',
+  target: 'electron-renderer',
   entry: { app: './renderer/app/index.js' },
   output: {
     path: path.resolve('./build'),

@@ -3,8 +3,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = (env, argv) => [
   {
     test: /\.node$/,
-    loader: "node-loader",
-    
+    use: [
+      {
+        loader: "node-addon-loader",
+        options: {
+          basePath: './'
+        },
+      }
+    ] 
   },
   {
     test: /\.jsx?$/,
