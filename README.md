@@ -6,12 +6,23 @@ opencv-electron
 
 # Build opencv4nodejs
 ```
-npm install https://github.com/ben60523/npm-opencv-build.git
-npm install https://github.com/ben60523/opencv4nodejs.git
-# Build .node file
-node node_modules\opencv4nodejs\install\install.js
-# Rebuild with electron-rebuild
-node node_modules\opencv4nodejs\install\install.js e
+remove opencv-build, opencv4nodejs in package.json
+# Install others module
+npm install
+# Install opencv-build
+npm install --save-dev https://github.com/ben60523/npm-opencv-build --ignore-scripts
+# Build OpenCV
+node node_modules/opencv-build/install.js
+
+copy-paste ippicvmt.lib from 3rdparty/ippicv/ippicv_win/icv/lib/*/ to 3rdparty/lib/Release
+
+npm install https://github.com/ben60523/opencv4nodejs --ignore-scripts
+
+cd node_modules/opencv4nodejs
+
+node install/install.js
+# Rebuild .node for Electron
+node install/install.js e
 ```
 # plain-js
 This example shows how to use opencv4nodejs with electron and plain HTML + Javascript without any bundler.

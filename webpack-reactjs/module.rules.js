@@ -7,7 +7,7 @@ module.exports = (env, argv) => [
       {
         loader: "node-addon-loader",
         options: {
-          basePath: './'
+          relativePath: process.env['NODE_ENV'] === 'production' ? 'resources/app.asar/build' : './'
         },
       }
     ] 
